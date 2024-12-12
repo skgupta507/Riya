@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run prebuild && next build",
+    "prebuild": "node check-files.js",
     "start": "next start",
     "lint": "next lint"
   },
@@ -19,7 +20,7 @@
   "author": "Your Name",
   "license": "MIT",
   "dependencies": {
-    "next": "13.4.10", 
+    "next": "13.4.10",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
